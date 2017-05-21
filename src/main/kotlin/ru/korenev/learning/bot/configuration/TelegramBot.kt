@@ -14,7 +14,7 @@ open class TelegramBot(val token: String) : TelegramLongPollingBot() {
     override fun getBotToken(): String = token
 
     override fun onUpdateReceived(update: Update) {
-        if (update.hasMessage() && update.message.text == "Самый лучший язык?") {
+        if (update.hasMessage() && update.message.text == "/Самый лучший язык?") {
             val message = SendMessage()
                     .setChatId(update.message.chatId)
                     .setText("Котлин!")
